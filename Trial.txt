@@ -1,0 +1,1 @@
+Hi this is a trial document for git practice.
