@@ -53,7 +53,11 @@ function cart(prod:string,quantity:number){
                         }
                         break;
                     
+<<<<<<< HEAD
   }
+=======
+    }
+>>>>>>> 9c5a52c5092eab2299aab2f15c7b645b271bcc1c
 }
 console.log("The items to be added to the cart are....");
 console.log(p1,"\t",q1);
