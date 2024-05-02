@@ -24,7 +24,8 @@
                     var co = coElement.value;
                     var am = parseFloat(amElement.value);
                     var result=CurrencyConvertor(co, am);
-                    text.value(result);
+                    console.log(result);
+                    text.append(result);
                 }
                 else {
                     console.error("Could not find input elements with specified IDs.");

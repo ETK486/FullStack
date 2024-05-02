@@ -6,7 +6,7 @@ function CurrencyConvertor(country: string, amount: number): void {
             const rate = response.conversion_rates[country];
             if (rate !== undefined) {
                 const convamount = rate * amount;
-                
+                return convamount;
             } else {
                 console.error(`Conversion rate for ${country} not found.`);
             }
@@ -21,7 +21,6 @@ function CurrencyConvertor(country: string, amount: number): void {
     oReq.send();
 }
 
- // Convert 100 USD to EUR
 
 
 

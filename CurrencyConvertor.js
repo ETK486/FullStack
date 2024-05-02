@@ -6,7 +6,7 @@ function CurrencyConvertor(country, amount) {
             var rate = response.conversion_rates[country];
             if (rate !== undefined) {
                 var convamount = rate * amount;
-                console.log(convamount);
+                return convamount;
             }
             else {
                 console.error("Conversion rate for ".concat(country, " not found."));
@@ -22,4 +22,3 @@ function CurrencyConvertor(country, amount) {
     oReq.open("GET", "https://v6.exchangerate-api.com/v6/375c6d6d2a8584098b5bf56e/latest/INR");
     oReq.send();
 }
-// Convert 100 USD to EUR
