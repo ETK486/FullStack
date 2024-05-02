@@ -30,44 +30,30 @@ function cart(prod:string,quantity:number){
                     items.Apple=quant;
                 }
                 break;
-                case "Mango":
-                    quant=items.Mango;
-                    if (quant>quantity){
-                        quant=quant-quantity;
-                        items.Mango=quant;
-                    }
-                    else{
-                        quant=quantity-quant;
-                        items.Mango=quant;
-                    }
-                    break;
-                    case "Pineapple":
-                        quant=items.Pineapple;
-                        if (quant>quantity){
-                            quant=quant-quantity;
-                            items.Pineapple=quant;
-                        }
-                        else{
-                            quant=quantity-quant;
-                            items.Pineapple=quant;
-                        }
-                        break;
-                    
-<<<<<<< HEAD
-  }
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-  }
-=======
-    }
->>>>>>> 9c5a52c5092eab2299aab2f15c7b645b271bcc1c
->>>>>>> be51a617497878cd817d904e0f4a0b7b171da626
-=======
-    }
->>>>>>> 9c5a52c5092eab2299aab2f15c7b645b271bcc1c
->>>>>>> be51a617497878cd817d904e0f4a0b7b171da626
-}
+            case "Mango":
+                quant=items.Mango;
+                if (quant>quantity){
+                    quant=quant-quantity;
+                    items.Mango=quant;
+                }
+                else{
+                    quant=quantity-quant;
+                    items.Mango=quant;
+                }
+                break;
+            case "Pineapple":
+                quant=items.Pineapple;
+                if (quant>quantity){
+                    quant=quant-quantity;
+                    items.Pineapple=quant;
+                }
+                else{
+                    quant=quantity-quant;
+                    items.Pineapple=quant;
+                }
+                break;
+            }
+        }
 console.log("The items to be added to the cart are....");
 console.log(p1,"\t",q1);
 console.log(p2,"\t",q2);
