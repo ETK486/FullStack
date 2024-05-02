@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Currency Converter</title>
+</head>
+<body>
+    <input type="text" id="con" placeholder="Country">
+    <input type="number" id="cur" placeholder="Amount">
+    <button id="convertBtn">Convert</button>
+    <textarea name="result" id="res" cols="30" rows="10"></textarea>
+
+    <script src="CurrencyConvertor.js"></script>
+    
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            var convertBtn = document.getElementById("convertBtn");
+            convertBtn.addEventListener("click", function() {
+                var coElement = document.getElementById("con");
+                var amElement = document.getElementById("cur");
+                var text=document.getElementById("res");
+                if (coElement && amElement) {
+                    var co = coElement.value;
+                    var am = parseFloat(amElement.value);
+                    var result=CurrencyConvertor(co, am);
+                    text.value(result);
+                }
+                else {
+                    console.error("Could not find input elements with specified IDs.");
+                }
+            });
+        });
+    </script>
+</body>
+</html>
