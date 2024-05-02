@@ -57,7 +57,12 @@ function cart(prod:string,quantity:number){
   }
 =======
 <<<<<<< HEAD
+<<<<<<< HEAD
   }
+=======
+    }
+>>>>>>> 9c5a52c5092eab2299aab2f15c7b645b271bcc1c
+>>>>>>> be51a617497878cd817d904e0f4a0b7b171da626
 =======
     }
 >>>>>>> 9c5a52c5092eab2299aab2f15c7b645b271bcc1c
