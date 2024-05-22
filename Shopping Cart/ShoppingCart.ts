@@ -1,4 +1,4 @@
-<<<<<<< HEAD:Shopping Cart/ShoppingCart.ts
+
 let items={"Mustang":10,"Apple":10,"Mango":10,"Pineapple":10};
 let p1:string="Mustang";
 let p2:string="Apple";
@@ -64,7 +64,6 @@ cart(p1,q1);
 cart(p2,q2);
 cart(p3,q3);
 console.log("The remaining items are....");
-=======
 let items={"Mustang":10,"Apple":10,"Mango":10,"Pineapple":10};
 let p1:string="Mustang";
 let p2:string="Apple";
@@ -129,5 +128,4 @@ cart(p1,q1);
 cart(p2,q2);
 cart(p3,q3);
 console.log("The remaining items are....");
->>>>>>> e31009d1bb19bb91417d347d9585fb29f030bd68:ShoppingCart.ts
 console.log(items);
