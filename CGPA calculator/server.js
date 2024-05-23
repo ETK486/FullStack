@@ -10,7 +10,7 @@ app.get('/', (req, res) => {
   res.sendFile(__dirname + '/client.html');
 });
 
-app.post('/calculate', (req, res) => {
+app.post('/calculate', (req, res) => { 
   let grades = req.body.grades.split(',').map(Number);
   let credits = req.body.credits.split(',').map(Number);
 
