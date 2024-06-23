@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import axios from 'axios';
+import './ContactItem.css';
 
 const ContactItem = ({ contact, updateContact, deleteContact }) => {
   const [isEditing, setIsEditing] = useState(false);
@@ -10,15 +10,12 @@ const ContactItem = ({ contact, updateContact, deleteContact }) => {
   };
 
   const onSave = () => {
-    axios.put(`http://localhost:5000/contacts/${contact._id}`, updatedContact)
-      .then(response => {
-        updateContact(response.data);
-        setIsEditing(false);
-      });
+    updateContact(contact._id, updatedContact);
+    setIsEditing(false);
   };
 
   return (
-    <div>
+    <div className="contact-item">
       {isEditing ? (
         <div>
           <input name="name" value={updatedContact.name} onChange={onChange} />
@@ -28,12 +25,18 @@ const ContactItem = ({ contact, updateContact, deleteContact }) => {
         </div>
       ) : (
         <div>
-          <span>{contact.name}</span>
-          <span>{contact.email}</span>
-          <span>{contact.phone}</span>
-          <button onClick={() => setIsEditing(true)}>Edit</button>
-          <button onClick={() => deleteContact(contact._id)}>Delete</button>
-        </div>
+          <table>
+            <tbody>
+                <tr>
+                <td>{contact.name}</td>
+                <td>{contact.email}</td>
+                <td>{contact.phone}</td>
+                <td><button onClick={() => setIsEditing(true)}>Edit</button></td>
+                <td><button onClick={() => deleteContact(contact._id)}>Delete</button></td>
+            </tr>
+        </tbody>
+        </table>
+    </div>
       )}
     </div>
   );

@@ -1,0 +1,56 @@
+.contact-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    background-color: #fff;
+  }
+  
+  .contact-item input {
+    margin-right: 10px;
+  }
+  
+  .contact-item button {
+    padding: 5px 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .contact-item button:first-of-type {
+    background-color: #007bff;
+    color: white;
+  }
+  
+  .contact-item button:last-of-type {
+    background-color: #dc3545;
+    color: white;
+  }
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    border-radius: 2%;
+  }
+  
+  td, th {
+    padding-right: 30px;
+    padding-left: 30px;
+    border: 1px solid #ddd;
+    text-align: left;
+  }
+  
+  button {
+    padding: 5px 10px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background-color: #0056b3;
+  }
+    

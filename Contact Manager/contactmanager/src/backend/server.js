@@ -6,8 +6,9 @@ const cors = require('cors');
 const app = express();
 app.use(cors());
 app.use(bodyParser.json());
+const mongoUrl = process.env.MONGO_URL || 'mongodb://localhost:27017/contactmanager';
 
-mongoose.connect('mongodb://localhost:27017/contactmanager', { useNewUrlParser: true, useUnifiedTopology: true });
+mongoose.connect(mongoUrl, { useNewUrlParser: true, useUnifiedTopology: true });
 
 const ContactSchema = new mongoose.Schema({
   name: String,

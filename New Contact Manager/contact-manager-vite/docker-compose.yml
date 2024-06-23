@@ -1,0 +1,36 @@
+version: '3.8'  # Use Docker Compose version 3.8 or higher for full compatibility
+
+services:
+  backend:
+    container_name: contact-manager-backend
+    build:
+      context: ./backend  # Path to the backend directory containing server.cjs and Dockerfile
+      dockerfile: Dockerfile  # Name of the Dockerfile for backend
+    environment:
+      - MONGO_URL=mongodb://mongo:27017/contacts  # MongoDB connection URL
+    ports:
+      - "5000:5000"  # Port mapping: host machine -> container
+    depends_on:
+      - mongo  # Depend on the 'mongo' service (defined below)
+
+  frontend:
+    container_name: contact-manager-frontend
+    build:
+      context: ./frontend  # Path to the frontend directory containing Vite app and Dockerfile
+      dockerfile: Dockerfile  # Name of the Dockerfile for frontend
+    ports:
+      - "5173:80"  # Port mapping: host machine -> container
+
+  mongo:
+    container_name: contact-manager-mongo
+    image: mongo:latest
+    ports:
+      - "27017:27017"  # Port mapping: host machine -> container
+
+# Optional: Define networks or volumes if needed
+# networks:
+#   my-network:
+#     driver: bridge
+# volumes:
+#   my-volume:
+#     driver: local
